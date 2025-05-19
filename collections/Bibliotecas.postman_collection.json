@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "dd7fc371-a145-4ab8-9153-6e6132a22668",
+		"name": "Bibliotecas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38231135",
+		"_collection_link": "https://cloud7-7346.postman.co/workspace/Cloud-Workspace~a3e49628-c461-47d7-b460-9d221d96b3e9/collection/38231135-dd7fc371-a145-4ab8-9153-6e6132a22668?action=share&source=collection_link&creator=38231135"
+	},
+	"item": [
+		{
+			"name": "Crear una biblioteca valida",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Biblioteca Central\",\n  \"direccion\": \"Calle 123\",\n  \"ciudad\": \"Ciudad Ejemplo\",\n  \"horaApertura\": \"2025-05-18T08:00:00.000Z\",\n  \"horaCierre\": \"2025-05-18T18:00:00.000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/libraries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar biblioteca",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Biblioteca Central\",\n  \"direccion\": \"Calle 123\",\n  \"ciudad\": \"Ciudad Ejemplo\",\n  \"horaApertura\": \"2025-05-18T08:00:00.000Z\",\n  \"horaCierre\": \"2025-05-18T18:00:00.000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una biblioteca invalida",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Biblioteca Central\",\n  \"direccion\": 2233,\n  \"ciudad\": \"Ciudad Ejemplo\",\n  \"horaApertura\": \"2025-05-18T08:00:00.000Z\",\n  \"horaCierre\": \"2025-05-18T18:00:00.000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/libraries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las bibliotecas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener biblioteca por id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener inexsistente biblioteca por id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "18e45f6f-f642-4e11-adb4-4949731d4403",
+		"name": "Libros - Bibliotecas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38231135",
+		"_collection_link": "https://cloud7-7346.postman.co/workspace/Cloud-Workspace~a3e49628-c461-47d7-b460-9d221d96b3e9/collection/38231135-18e45f6f-f642-4e11-adb4-4949731d4403?action=share&source=collection_link&creator=38231135"
+	},
+	"item": [
+		{
+			"name": "Asociar libro a biblioteca",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId/books/:libroId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId",
+						"books",
+						":libroId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						},
+						{
+							"key": "libroId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar libros a una biblioteca",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"librosIds\": [\"1\", \"2\", \"3\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId",
+						"books",
+						""
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asociar libro inexesistente a biblioteca",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId/books/:libroId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId",
+						"books",
+						":libroId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						},
+						{
+							"key": "libroId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los libros de una biblioteca",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId",
+						"books"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener  libro asociado a biblioteca",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId/books/:libroId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId",
+						"books",
+						":libroId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						},
+						{
+							"key": "libroId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener  libro inexsistente asociado a biblioteca",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/libraries/:bibliotecaId/books/:libroId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libraries",
+						":bibliotecaId",
+						"books",
+						":libroId"
+					],
+					"variable": [
+						{
+							"key": "bibliotecaId",
+							"value": ""
+						},
+						{
+							"key": "libroId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
